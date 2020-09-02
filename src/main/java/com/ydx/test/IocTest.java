@@ -1,9 +1,11 @@
 package com.ydx.test;
 
+import com.ydx.bean.Person;
 import com.ydx.config.MainConfig;
 import com.ydx.config.MainConfig2;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @ClassName IocTest
@@ -43,5 +45,21 @@ public class IocTest {
         Object person2 = annotationConfigApplicationContext.getBean("person");
 //
 //        System.out.println(person1 == person2);
+    }
+    @Test
+    public void test03(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
+
+        ConfigurableEnvironment environment = annotationConfigApplicationContext.getEnvironment();
+        String osName = environment.getProperty("os.name");
+        String osVersion = environment.getProperty("os.version");
+
+        System.out.println(osVersion);
+
+        String[] beanNamesForType = annotationConfigApplicationContext.getBeanNamesForType(Person.class);
+
+        for (String name : beanNamesForType) {
+            System.out.println(name);
+        }
     }
 }

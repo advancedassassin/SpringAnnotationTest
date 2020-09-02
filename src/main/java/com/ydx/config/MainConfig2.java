@@ -1,7 +1,10 @@
 package com.ydx.config;
 
 import com.ydx.bean.Person;
+import com.ydx.condition.LinuxCondition;
+import com.ydx.condition.WindowsCondition;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
@@ -20,6 +23,19 @@ public class MainConfig2 {
     public Person person(){
         System.out.println("给容器中注入person。。。");
         return new Person("zhangsan",25);
+    }
+    // 如果是windows系统，注册bill，如果是linux注册linus
+    // @Conditional({Condition数组})按照一定条件给容器中注入bean
+    @Conditional({WindowsCondition.class})
+    @Bean("bill")
+    public Person person01(){
+        return new Person("Bill Gates",61);
+    }
+
+    @Conditional({LinuxCondition.class})
+    @Bean("linus")
+    public Person person02(){
+        return new Person("linus",48);
     }
 
 }
