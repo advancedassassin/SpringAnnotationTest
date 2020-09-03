@@ -1,12 +1,11 @@
 package com.ydx.config;
 
+import com.ydx.bean.Color;
 import com.ydx.bean.Person;
+import com.ydx.bean.Red;
 import com.ydx.condition.LinuxCondition;
 import com.ydx.condition.WindowsCondition;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 /**
  * @ClassName MainConfig2
@@ -16,6 +15,9 @@ import org.springframework.context.annotation.Scope;
  * @Version 1.0
  **/
 @Configuration
+// 快速导入组件，id是组件全类名
+//@Import(Color.class)
+@Import({Color.class, Red.class})
 public class MainConfig2 {
     // 默认是单实例的
 //    @Scope("prototype")
