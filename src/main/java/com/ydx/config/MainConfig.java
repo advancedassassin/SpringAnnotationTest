@@ -1,8 +1,8 @@
 package com.ydx.config;
 
 import com.ydx.bean.Person;
+import com.ydx.impl.filter.MyTypeFilter;
 import org.springframework.context.annotation.*;
-import org.springframework.stereotype.Controller;
 
 /**
  * @ClassName MainConfig

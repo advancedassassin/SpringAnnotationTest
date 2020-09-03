@@ -1,4 +1,4 @@
-package com.ydx.selector;
+package com.ydx.impl.selector;
 
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;

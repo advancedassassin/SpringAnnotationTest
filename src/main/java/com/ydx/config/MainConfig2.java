@@ -1,11 +1,9 @@
 package com.ydx.config;
 
-import com.ydx.bean.Color;
 import com.ydx.bean.Person;
-import com.ydx.bean.Red;
-import com.ydx.condition.LinuxCondition;
-import com.ydx.condition.WindowsCondition;
-import com.ydx.selector.MyImportSelector;
+import com.ydx.impl.condition.LinuxCondition;
+import com.ydx.impl.condition.WindowsCondition;
+import com.ydx.impl.selector.MyImportSelector;
 import org.springframework.context.annotation.*;
 
 /**
