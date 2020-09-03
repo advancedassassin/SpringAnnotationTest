@@ -5,6 +5,7 @@ import com.ydx.bean.Person;
 import com.ydx.bean.Red;
 import com.ydx.condition.LinuxCondition;
 import com.ydx.condition.WindowsCondition;
+import com.ydx.selector.MyImportSelector;
 import org.springframework.context.annotation.*;
 
 /**
@@ -17,7 +18,8 @@ import org.springframework.context.annotation.*;
 @Configuration
 // 快速导入组件，id是组件全类名
 //@Import(Color.class)
-@Import({Color.class, Red.class})
+//@Import({Color.class, Red.class})
+@Import({MyImportSelector.class})
 public class MainConfig2 {
     // 默认是单实例的
 //    @Scope("prototype")
