@@ -16,6 +16,7 @@ public class MyImportSelector implements ImportSelector {
         // AnnotationMetadata  当前标注@Import注解类的所有注解信息（注解名、注解值）
 
 
+
         return new String[]{"com.ydx.bean.Blue","com.ydx.bean.Yellow"};
     }
 }
