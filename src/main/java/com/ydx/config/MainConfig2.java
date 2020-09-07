@@ -1,8 +1,10 @@
 package com.ydx.config;
 
+import com.ydx.bean.ColorFactoryBean;
 import com.ydx.bean.Person;
 import com.ydx.impl.condition.LinuxCondition;
 import com.ydx.impl.condition.WindowsCondition;
+import com.ydx.impl.registrar.MyImportBeanDefinitionRegistrar;
 import com.ydx.impl.selector.MyImportSelector;
 import org.springframework.context.annotation.*;
 
@@ -17,7 +19,8 @@ import org.springframework.context.annotation.*;
 // 快速导入组件，id是组件全类名
 //@Import(Color.class)
 //@Import({Color.class, Red.class})
-@Import({MyImportSelector.class})
+//@Import({MyImportSelector.class})
+@Import({MyImportSelector.class,MyImportBeanDefinitionRegistrar.class})
 public class MainConfig2 {
     // 默认是单实例的
 //    @Scope("prototype")
@@ -40,4 +43,8 @@ public class MainConfig2 {
         return new Person("linus",48);
     }
 
+    @Bean
+    public ColorFactoryBean colorFactoryBean(){
+        return new ColorFactoryBean();
+    }
 }
