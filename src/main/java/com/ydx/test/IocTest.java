@@ -81,6 +81,7 @@ public class IocTest {
     public void test_FactoryBean(){
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
         printBeans(annotationConfigApplicationContext);
+        // 工厂bean获取的是调用调用getObject创建的对象
         Object colorFactoryBean1 = annotationConfigApplicationContext.getBean("colorFactoryBean");
         Object colorFactoryBean2 = annotationConfigApplicationContext.getBean("colorFactoryBean");
         System.out.println(colorFactoryBean1==colorFactoryBean2);
