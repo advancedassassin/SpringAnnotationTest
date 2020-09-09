@@ -88,5 +88,7 @@ public class IocTest {
 
         System.out.println("colorFactoryBean的類型："+colorFactoryBean1.getClass());
 
+        Object colorFactoryBean3 = annotationConfigApplicationContext.getBean("&colorFactoryBean");
+        System.out.println("colorFactoryBean的類型："+colorFactoryBean3.getClass());
     }
 }
