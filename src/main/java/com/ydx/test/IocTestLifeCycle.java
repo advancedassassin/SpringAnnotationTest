@@ -25,8 +25,14 @@ public class IocTestLifeCycle {
         System.out.println(car == car1);
         annotationConfigApplicationContext.close();
 
+    }
+    @Test
+    public void test2(){
+        // 创建容器
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfigOfLifeCycle.class);
+        System.out.println("容器创建完成");
 
-
+        annotationConfigApplicationContext.close();
 
     }
 
