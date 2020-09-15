@@ -10,9 +10,8 @@ package com.ydx.gittest;
 public class GitEmergeTest {
 
     public void gitEmergeTest(){
-        System.out.println("需要删除的错误代码");
 
-        System.out.println("需要修改的代码---（）");
+        System.out.println("需要修改的代码---（修改代码）");
 
 
         // 不变的代码
