@@ -14,7 +14,10 @@ public class GitEmergeTest {
 
         System.out.println("需要修改的代码---（）");
 
-
+        // 需求增加
+        System.out.println("增加需求代码写了1");
+        System.out.println("增加需求代码写了2");
+        System.out.println("增加需求代码写了3");
         // 不变的代码
         for (int i = 1;i<=10;i++) {
             System.out.println(i);
