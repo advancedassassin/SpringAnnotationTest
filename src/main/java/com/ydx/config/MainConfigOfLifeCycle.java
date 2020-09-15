@@ -1,6 +1,7 @@
 package com.ydx.config;
 
 import com.ydx.bean.Car;
+import com.ydx.impl.processor.MyBeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Scope;
  * @Version 1.0
  **/
 @ComponentScan("com.ydx.bean")
+//@ComponentScan("com.ydx.impl")
 @Configuration
 public class MainConfigOfLifeCycle {
 //    @Scope("prototype")
@@ -21,5 +23,9 @@ public class MainConfigOfLifeCycle {
 //    public Car car(){
 //        return new Car();
 //    }
+    @Bean
+    public MyBeanPostProcessor myBeanPostProcessor(){
+        return new MyBeanPostProcessor();
+    }
 
 }
