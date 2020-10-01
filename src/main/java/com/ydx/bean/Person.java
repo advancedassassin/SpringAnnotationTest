@@ -1,5 +1,6 @@
 package com.ydx.bean;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -11,9 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
  **/
 
 public class Person {
-
+    @Value("zs")
     private String name;
-
+    @Value("#{20-1}")
     private Integer age;
 
     public String getName() {
