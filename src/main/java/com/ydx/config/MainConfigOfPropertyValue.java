@@ -3,6 +3,7 @@ package com.ydx.config;
 import com.ydx.bean.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @ClassName MainConfigPropertyValue
@@ -12,6 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  **/
 @Configuration
+// 使用@PropertySource读取外部配置文件中的k/v保存到运行环境变量中，加载完毕后用${}取出值
+@PropertySource(value = {"classpath:person.properties"})
 public class MainConfigOfPropertyValue {
 
     @Bean

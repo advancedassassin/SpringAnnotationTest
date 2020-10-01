@@ -25,6 +25,9 @@ public class IocTestPropertyValue {
         Person person = (Person) annotationConfigApplicationContext.getBean("person");
 
         System.out.println(person);
+
+        String property = annotationConfigApplicationContext.getEnvironment().getProperty("person.nickName");
+        System.out.println(property);
         annotationConfigApplicationContext.close();
 
     }
