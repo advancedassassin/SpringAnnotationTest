@@ -1,5 +1,7 @@
 package com.ydx.bean;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @ClassName Car
  * @Description 描述一下该类用途
@@ -7,6 +9,7 @@ package com.ydx.bean;
  * @Date 2020/9/9 16:01
  * @Version 1.0
  **/
+@Component
 public class Car {
 
     public Car(){
