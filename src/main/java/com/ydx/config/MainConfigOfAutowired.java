@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan({"com.ydx.controller","com.ydx.dao","com.ydx.service"})
 public class MainConfigOfAutowired {
 
-    @Primary
+//    @Primary
     @Bean("bookDao2")
     public BookDao bookDao(){
         BookDao bookDao = new BookDao();

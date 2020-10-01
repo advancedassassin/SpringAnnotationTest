@@ -3,7 +3,11 @@ package com.ydx.service;
 import com.ydx.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
 
 /**
  * @ClassName BookService
@@ -15,9 +19,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 
-    @Qualifier("bookDao")
+//    @Qualifier("bookDao")
 //    @Autowired(required = false)
-    @Autowired
+//    @Autowired
+//    @Resource(name = "bookDao2")
+//    @Resource
+    @Inject
     private BookDao bookDao;
 
     public void print(){
