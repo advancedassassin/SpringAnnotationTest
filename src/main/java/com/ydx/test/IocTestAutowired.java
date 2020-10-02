@@ -70,4 +70,15 @@ public class IocTestAutowired {
         annotationConfigApplicationContext.close();
 
     }
+
+    @Test
+    public void test3(){
+
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfigOfAutowired.class);
+
+
+
+        annotationConfigApplicationContext.close();
+
+    }
 }
