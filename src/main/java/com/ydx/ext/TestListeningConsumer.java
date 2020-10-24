@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestListeningConsumer {
 
-    @EventListener(classes = {ApplicationEvent.class})
-    public void onMessage(ApplicationEvent event){
-        System.out.println("ApplicationListenere收到了"+event);
+    @EventListener(classes = {MyEvent.class})
+    public void onMessage(MyEvent myEvent){
+        System.out.println("TestListeningConsumer收到了MyEvent!!!");
     }
 }
